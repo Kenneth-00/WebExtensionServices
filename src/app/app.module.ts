@@ -13,6 +13,12 @@ import { MainComponent } from './components/main/main.component';
 import { ResAgenComponent } from './components/res-agen/res-agen.component';
 import { RnaComponent } from './components/rna/rna.component';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +34,13 @@ import { RnaComponent } from './components/rna/rna.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSidenavModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

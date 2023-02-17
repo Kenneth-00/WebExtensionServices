@@ -15,8 +15,8 @@ const routes: Routes = [
     children:
     [
       {
-        path:'main', 
-        component:MainComponent
+        path:'home', 
+        component:HomeComponent
       },
       {
         path:'research-agenda', 
