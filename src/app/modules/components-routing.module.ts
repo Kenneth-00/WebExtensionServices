@@ -7,6 +7,7 @@ import { PartLinkComponent } from '../components/part-link/part-link.component';
 import { ResAgenComponent } from '../components/res-agen/res-agen.component';
 import { RnaComponent } from '../components/rna/rna.component';
 import { MainComponent } from '../components/main/main.component';
+import { CampusComponent } from '../components/users/campus/campus.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
       {
         path:'partnership-and-linkage', 
         component:PartLinkComponent
+      },
+      {
+        path:'campus-report',
+        component:CampusComponent
       },
       {
         path:'',

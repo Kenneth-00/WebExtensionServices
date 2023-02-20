@@ -1,0 +1,71 @@
+<div  class="form">
+    <div class="header-field">
+        <p>MONTHLY ACCOMPLISHMENT REPORT</p>
+    </div>
+
+    <div class="form-content">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="inclu_dates">
+              <th mat-header-cell *matHeaderCellDef> Inclusive Dates </th>
+              <td mat-cell *matCellDef="let element"> {{element.inclu_dates}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="title">
+              <th mat-header-cell *matHeaderCellDef> Title </th>
+              <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="typeof_bene">
+              <th mat-header-cell *matHeaderCellDef> Type of Beneficiaries </th>
+              <td mat-cell *matCellDef="let element"> {{element.typeof_bene}} </td>
+            </ng-container>
+           
+            <!-- Symbol Column -->
+           <ng-container matColumnDef="no_bene">
+              <th mat-header-cell *matHeaderCellDef> No of Beneficiaries </th>
+              <td mat-cell *matCellDef="let element"> {{element.no_bene}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="duration">
+                <th mat-header-cell *matHeaderCellDef> Duration </th>
+                <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="type_serv_rendered">
+                <th mat-header-cell *matHeaderCellDef> Type of Service Rendered </th>
+                <td mat-cell *matCellDef="let element"> {{element.type_serv_rendered}} </td>
+              </ng-container>
+            
+              <ng-container matColumnDef="partners">
+                <th mat-header-cell *matHeaderCellDef> Partner Agency</th>
+                <td mat-cell *matCellDef="let element"> {{element.partners}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="fac_staff_involved">
+                <th mat-header-cell *matHeaderCellDef> Faculty/Staff Involved </th>
+                <td mat-cell *matCellDef="let element"> {{element.fac_staff_involved}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="role">
+                <th mat-header-cell *matHeaderCellDef> Nature of Participation </th>
+                <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="cost_funding_source">
+                <th mat-header-cell *matHeaderCellDef> Cost and Funding Source </th>
+                <td mat-cell *matCellDef="let element"> {{element.cost_funding_source}} </td>
+              </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+    </div>
+</div>
